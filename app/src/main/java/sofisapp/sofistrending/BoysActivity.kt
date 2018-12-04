@@ -20,9 +20,9 @@ class BoysActivity:AppCompatActivity() {
 
         val prendas = ArrayList<Prendas>()
 
-        prendas.add(Prendas("Niños 1", 250.00,R.drawable.boy1))
-        prendas.add(Prendas("Niños 2", 250.00,R.drawable.boy2))
-        prendas.add(Prendas("Niños 3", 250.00,R.drawable.boy3))
+        prendas.add(Prendas("Niños 1", 280.00,R.drawable.boy1))
+        prendas.add(Prendas("Niños 2", 300.00,R.drawable.boy2))
+        prendas.add(Prendas("Niños 3", 500.00,R.drawable.boy3))
         prendas.add(Prendas("Niños 4", 250.00,R.drawable.boy4))
 
 
