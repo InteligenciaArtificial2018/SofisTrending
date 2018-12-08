@@ -9,8 +9,8 @@ import android.widget.ImageView
 import android.widget.RatingBar
 import android.widget.TextView
 
-class AdaptadorCustom(var context: Context, var items: ArrayList<Prendas>, var listener: ClickListener, var longClickListener: LongClickListener): RecyclerView.Adapter<AdaptadorCustom.ViewHolder>() {
-    override fun onCreateViewHolder(parent: ViewGroup, position: Int): AdaptadorCustom.ViewHolder {
+class AdaptadorCustomDetalles(var context: Context, var items: ArrayList<Detalles>, var listener: ClickListener, var longClickListener: LongClickListener): RecyclerView.Adapter<AdaptadorCustomDetalles.ViewHolder>() {
+    override fun onCreateViewHolder(parent: ViewGroup, position: Int): AdaptadorCustomDetalles.ViewHolder {
         val vista = LayoutInflater.from(context).inflate(R.layout.activity_template, parent, false)
 
         return ViewHolder(vista, listener, longClickListener)
@@ -20,12 +20,11 @@ class AdaptadorCustom(var context: Context, var items: ArrayList<Prendas>, var l
         return items.count()
     }
 
-    override fun onBindViewHolder(holder: AdaptadorCustom.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: AdaptadorCustomDetalles.ViewHolder, position: Int) {
         val item = items.get(position)
         holder.foto?.setImageResource(item.foto)
-        holder.nombre?.text = item.nombre
-        holder.precio?.text = "L " + item.precio.toString()
-
+        holder.titulo?.text = item.titulo
+        holder.contenido?.text = item.contenido
     }
 
     class ViewHolder(var vista: View, var listener: ClickListener, var longClickListener: LongClickListener): RecyclerView.ViewHolder(vista), View.OnClickListener, View.OnLongClickListener {
@@ -40,15 +39,14 @@ class AdaptadorCustom(var context: Context, var items: ArrayList<Prendas>, var l
         }
 
         var foto: ImageView? = null
-        var nombre: TextView? = null
-        var precio: TextView? = null
-        var rating: RatingBar? = null
+        var titulo: TextView? = null
+        var contenido: TextView? = null
+
 
         init {
-            foto = vista.findViewById(R.id.ivImagen)
-            nombre = vista.findViewById(R.id.tvNombre)
-            precio = vista.findViewById(R.id.tvPrecio)
-
+            foto = vista.findViewById(R.id.imgPrenda)
+            titulo = vista.findViewById(R.id.tvTitulo)
+            contenido = vista.findViewById(R.id.tvContenido)
 
             vista.setOnClickListener(this)
             vista.setOnLongClickListener(this)

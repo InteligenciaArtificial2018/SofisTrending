@@ -1,5 +1,6 @@
 package sofisapp.sofistrending
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
@@ -34,7 +35,10 @@ class BoysActivity:AppCompatActivity() {
 
         adaptador = AdaptadorCustom(this, prendas, object: ClickListener {
             override fun onClick(vista: View, index: Int) {
-                Toast.makeText(applicationContext, prendas.get(index).nombre, Toast.LENGTH_SHORT).show()
+                if (prendas.get(index).nombre == "Niños 1"){
+                    val intent = Intent(applicationContext, DetallesBoy1Activity::class.java)
+                    startActivity(intent)
+                }
             }
         }, object: LongClickListener {
             override fun LongClickListener(vista: View, index: Int) {
