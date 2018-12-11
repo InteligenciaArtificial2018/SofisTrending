@@ -20,10 +20,10 @@ class CaballerosActivity:AppCompatActivity() {
 
         val prendas = ArrayList<Prendas>()
 
-        prendas.add(Prendas("Caballeros 1", 250.00,R.drawable.hombre1))
-        prendas.add(Prendas("Caballeros 2", 250.00,R.drawable.hombre2))
-        prendas.add(Prendas("Caballeros 3", 250.00,R.drawable.hombre3))
-        prendas.add(Prendas("Caballeros 4", 250.00,R.drawable.hombre4))
+        prendas.add(Prendas("Nautica", 900.00,R.drawable.hombre1))
+        prendas.add(Prendas("Tomy", 4300.00,R.drawable.hombre2))
+        prendas.add(Prendas("Hugo Boss", 1200.00,R.drawable.hombre3))
+        prendas.add(Prendas("Stealth", 700.00,R.drawable.hombre4))
 
 
         lista = findViewById(R.id.rvLista)

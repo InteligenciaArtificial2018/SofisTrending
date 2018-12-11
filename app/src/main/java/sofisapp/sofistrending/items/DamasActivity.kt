@@ -19,10 +19,10 @@ class DamasActivity:AppCompatActivity() {
 
         val prendas = ArrayList<Prendas>()
 
-        prendas.add(Prendas("Damas 1", 250.00,R.drawable.mujer1))
-        prendas.add(Prendas("Damas 2", 250.00,R.drawable.mujer2))
-        prendas.add(Prendas("Damas 3", 250.00,R.drawable.mujer3))
-        prendas.add(Prendas("Damas 4", 250.00,R.drawable.mujer4))
+        prendas.add(Prendas("Guess", 550.00,R.drawable.mujer1))
+        prendas.add(Prendas("Morgan 2", 800.00,R.drawable.mujer2))
+        prendas.add(Prendas("Buylevard", 1500.00,R.drawable.mujer3))
+        prendas.add(Prendas("Only", 250.00,R.drawable.mujer4))
 
 
         lista = findViewById(R.id.rvLista)
