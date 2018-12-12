@@ -1,14 +1,15 @@
-package sofisapp.sofistrending
+package sofisapp.sofistrending.detalles
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
-import android.util.Log
-import android.view.View
-import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_template_detalles.*
+import sofisapp.sofistrending.LoginActivity
+import sofisapp.sofistrending.R
+import sofisapp.sofistrending.adaptadores.AdaptadorCustom
+import sofisapp.sofistrending.modelos.Detalles
 
 class DetallesBoy1Activity : AppCompatActivity() {
 
@@ -22,7 +23,7 @@ class DetallesBoy1Activity : AppCompatActivity() {
 
         val detalles = ArrayList<Detalles>()
 
-        detalles.add(Detalles("Boy 1", "Prenda para niño",R.drawable.f))
+        detalles.add(Detalles("Boy 1", "Prenda para niño", R.drawable.f))
 
         list = findViewById(R.id.rvLista)
         list?.setHasFixedSize(true)
@@ -42,7 +43,7 @@ class DetallesBoy1Activity : AppCompatActivity() {
         **/
 
         btnComprar.setOnClickListener {
-            val intent = Intent(this,LoginActivity::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
 

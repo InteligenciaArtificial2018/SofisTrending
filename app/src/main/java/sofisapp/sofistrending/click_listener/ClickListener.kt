@@ -1,4 +1,4 @@
-package sofisapp.sofistrending
+package sofisapp.sofistrending.click_listener
 
 import android.view.View
 

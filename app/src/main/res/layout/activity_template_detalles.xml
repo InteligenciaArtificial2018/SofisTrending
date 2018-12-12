@@ -1,7 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="wrap_content" android:clickable="true"
+              android:background="?android:attr/selectableItemBackground">
 
+    <TextView
+            android:text="@string/tvTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/tvTitulo"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp" android:layout_marginTop="16dp" android:layout_marginBottom="8dp"/>
+    <TextView
+            android:text="@string/tvContenido"
+            android:layout_width="match_parent"
+            android:layout_height="75dp" android:id="@+id/tvContenido"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp" android:layout_marginTop="16dp" android:layout_marginBottom="8dp"
+            android:textSize="16dp"/>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:layout_marginTop="8dp" android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp" android:layout_marginBottom="16dp">
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="197dp" app:srcCompat="@drawable/boy1" android:id="@+id/imgPrenda"
+                android:textAlignment="center"
+                android:layout_marginTop="16dp"/>
+    </LinearLayout>
+    <Button
+            android:text="@string/Idcarrito"
+            android:layout_width="148dp"
+            android:layout_height="wrap_content" android:id="@+id/btnCarrito" tools:text="@string/Idcarrito"
+            android:drawableLeft="@drawable/cars"/>
+    <Button
+            android:text="@string/Idtarjeta"
+            android:layout_width="148dp"
+            android:layout_height="wrap_content" android:id="@+id/btnComprar" tools:text="@string/Idtarjeta"
+            android:drawableLeft="@drawable/money"/>
 </LinearLayout>

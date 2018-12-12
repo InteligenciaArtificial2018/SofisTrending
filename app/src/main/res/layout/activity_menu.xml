@@ -4,7 +4,7 @@
                                              xmlns:tools="http://schemas.android.com/tools"
                                              android:layout_width="match_parent"
                                              android:layout_height="match_parent"
-                                             android:background="@color/colorFondo">
+                                             android:background="@color/colorFondoSecundario">
 
     <TextView
             android:text="Seleccione una opcion"
@@ -18,11 +18,13 @@
             android:textSize="26sp"/>
     <Button
             android:text="Niños"
+
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/btnBoys" android:layout_marginTop="32dp"
             app:layout_constraintTop_toBottomOf="@+id/tvOpcion" app:layout_constraintEnd_toEndOf="@+id/tvOpcion"
-            app:layout_constraintStart_toStartOf="@+id/tvOpcion" android:background="@color/colorAccent"
+            app:layout_constraintStart_toStartOf="@+id/tvOpcion"
+            android:background="@drawable/estilo_botones"
             android:textStyle="bold" android:textColor="@android:color/white"/>
     <Button
             android:text="Damas"
@@ -30,7 +32,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/btnDamas" app:layout_constraintEnd_toEndOf="@+id/btnBoys"
             app:layout_constraintStart_toStartOf="@+id/btnBoys" android:layout_marginTop="32dp"
-            app:layout_constraintTop_toBottomOf="@+id/btnBoys" android:background="@color/colorAccent"
+            app:layout_constraintTop_toBottomOf="@+id/btnBoys"
+            android:background="@drawable/estilo_botones"
             android:textColor="@android:color/white" android:textStyle="bold"/>
     <Button
             android:text="Caballeros"
@@ -38,7 +41,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/btnCaballeros" app:layout_constraintEnd_toEndOf="@+id/btnDamas"
             app:layout_constraintStart_toStartOf="@+id/btnDamas" android:layout_marginTop="32dp"
-            app:layout_constraintTop_toBottomOf="@+id/btnDamas" android:background="@color/colorAccent"
+            app:layout_constraintTop_toBottomOf="@+id/btnDamas"
+            android:background="@drawable/estilo_botones"
             android:textColor="@android:color/white" android:textStyle="bold"/>
     <TextView
             android:text="Volver a Inicio"

@@ -17,12 +17,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".MenuActivity"/>
-        <activity android:name=".BoysActivity"/>
-        <activity android:name=".DamasActivity"/>
-        <activity android:name=".CaballerosActivity"/>
-        <activity android:name=".ActivityDetalles">
+        <activity android:name=".items.BoysActivity"/>
+        <activity android:name=".items.DamasActivity"/>
+        <activity android:name=".items.CaballerosActivity"/>
+        <activity android:name=".detalles.DetallesBoy1Activity">
         </activity>
-        <activity android:name=".DetallesBoy1Activity">
+        <activity android:name=".LoginActivity">
         </activity>
     </application>
 

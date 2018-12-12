@@ -1,4 +1,4 @@
-package sofisapp.sofistrending
+package sofisapp.sofistrending.adaptadores
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
@@ -8,9 +8,13 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.RatingBar
 import android.widget.TextView
+import sofisapp.sofistrending.click_listener.ClickListener
+import sofisapp.sofistrending.click_listener.LongClickListener
+import sofisapp.sofistrending.modelos.Prendas
+import sofisapp.sofistrending.R
 
 class AdaptadorCustom(var context: Context, var items: ArrayList<Prendas>, var listener: ClickListener, var longClickListener: LongClickListener): RecyclerView.Adapter<AdaptadorCustom.ViewHolder>() {
-    override fun onCreateViewHolder(parent: ViewGroup, position: Int): AdaptadorCustom.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, position: Int): ViewHolder {
         val vista = LayoutInflater.from(context).inflate(R.layout.activity_template, parent, false)
 
         return ViewHolder(vista, listener, longClickListener)
@@ -20,7 +24,7 @@ class AdaptadorCustom(var context: Context, var items: ArrayList<Prendas>, var l
         return items.count()
     }
 
-    override fun onBindViewHolder(holder: AdaptadorCustom.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = items.get(position)
         holder.foto?.setImageResource(item.foto)
         holder.nombre?.text = item.nombre

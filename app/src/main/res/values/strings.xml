@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Sofia Trending</string>
     <string name="idcontenido">Falda color azul</string>
+    <string name="tvTitulo">Traje De Niño</string>
+    <string name="tvContenido">Chaqueta color Azul, Camisa Color Azul Nautica, Pantalon Azul Marino</string>
+    <string name="Idprecio">1500.00L</string>
+    <string name="Idcarrito">Carrito</string>
+    <string name="Idtarjeta">Comprar</string>
 </resources>

@@ -1,4 +1,4 @@
-package sofisapp.sofistrending
+package sofisapp.sofistrending.modelos
 
 class Prendas(nombre: String, precio: Double, foto: Int) {
     var nombre = ""

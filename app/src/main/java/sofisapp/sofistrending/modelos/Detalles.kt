@@ -1,4 +1,4 @@
-package sofisapp.sofistrending
+package sofisapp.sofistrending.modelos
 
 class Detalles (titulo: String, contenido: String, foto: Int) {
     var titulo = ""

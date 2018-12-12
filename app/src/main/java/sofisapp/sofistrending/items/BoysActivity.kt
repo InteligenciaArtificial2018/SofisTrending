@@ -1,4 +1,4 @@
-package sofisapp.sofistrending
+package sofisapp.sofistrending.items
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,7 +7,12 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.view.View
-import android.widget.Toast
+import sofisapp.sofistrending.*
+import sofisapp.sofistrending.adaptadores.AdaptadorCustom
+import sofisapp.sofistrending.click_listener.ClickListener
+import sofisapp.sofistrending.click_listener.LongClickListener
+import sofisapp.sofistrending.detalles.DetallesBoy1Activity
+import sofisapp.sofistrending.modelos.Prendas
 
 class BoysActivity:AppCompatActivity() {
 
@@ -21,10 +26,10 @@ class BoysActivity:AppCompatActivity() {
 
         val prendas = ArrayList<Prendas>()
 
-        prendas.add(Prendas("Niños 1", 280.00,R.drawable.boy1))
-        prendas.add(Prendas("Niños 2", 300.00,R.drawable.boy2))
-        prendas.add(Prendas("Niños 3", 500.00,R.drawable.boy3))
-        prendas.add(Prendas("Niños 4", 250.00,R.drawable.boy4))
+        prendas.add(Prendas("Niños 1", 280.00, R.drawable.boy1))
+        prendas.add(Prendas("Niños 2", 300.00, R.drawable.boy2))
+        prendas.add(Prendas("Niños 3", 500.00, R.drawable.boy3))
+        prendas.add(Prendas("Niños 4", 250.00, R.drawable.boy4))
 
 
         lista = findViewById(R.id.rvLista)
@@ -33,14 +38,14 @@ class BoysActivity:AppCompatActivity() {
         layoutManager = LinearLayoutManager(this)
         lista?.layoutManager = layoutManager
 
-        adaptador = AdaptadorCustom(this, prendas, object: ClickListener {
+        adaptador = AdaptadorCustom(this, prendas, object : ClickListener {
             override fun onClick(vista: View, index: Int) {
-                if (prendas.get(index).nombre == "Niños 1"){
+                if (prendas.get(index).nombre == "Niños 1") {
                     val intent = Intent(applicationContext, DetallesBoy1Activity::class.java)
                     startActivity(intent)
                 }
             }
-        }, object: LongClickListener {
+        }, object : LongClickListener {
             override fun LongClickListener(vista: View, index: Int) {
                 Log.d("LONG", "Long listenersito")
             }

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "363895840103",
+    "firebase_url": "https://sofistrending.firebaseio.com",
+    "project_id": "sofistrending",
+    "storage_bucket": "sofistrending.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:363895840103:android:03232e1c60488109",
+        "android_client_info": {
+          "package_name": "sofisapp.sofistrending"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "363895840103-pg57cp4u1vmds52qppma15sb58qhs6a6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRqv9sMiQcsvy8gm4nhb2tDTREP7umHtE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
