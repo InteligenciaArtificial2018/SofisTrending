@@ -4,6 +4,9 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_agregar_item_carrito.*
+import kotlinx.android.synthetic.main.activity_carrito.*
+import kotlinx.android.synthetic.main.activity_detalles_boy_one_carrito.*
+import kotlinx.android.synthetic.main.activity_template_detalles.*
 import sofisapp.sofistrending.data.Carrito
 import sofisapp.sofistrending.data.SofiasTrendingDatabase
 
@@ -24,6 +27,9 @@ class AgregarItemCarrito : AppCompatActivity() {
         val cantidad = intent.getIntExtra("cantidad", 0)
         val precio = intent.getDoubleExtra("precio", 0.0)
 
+
+
+
         // Si no está definido o viene en blanco, el usuario presionó el FAB
         if (nombre == null || nombre == "") {
 
@@ -32,6 +38,7 @@ class AgregarItemCarrito : AppCompatActivity() {
                 sofiasTrendingDatabase?.getCarritoDao()?.saveCarrito(carrito)
                 finish()
             }
+
         } else {
             val id = intent.getIntExtra("id", 0)
             etNombre.setText(nombre)
@@ -44,6 +51,7 @@ class AgregarItemCarrito : AppCompatActivity() {
                 startActivity(Intent(this, CarritoActivity::class.java))
                 finish()
             }
+
         }
-    }
-}
+    }}
+

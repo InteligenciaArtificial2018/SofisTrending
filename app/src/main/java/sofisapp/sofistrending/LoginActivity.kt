@@ -18,8 +18,7 @@ class LoginActivity : AppCompatActivity() {
         ingresarCuenta()
 
         }
-    private fun ingresarCuenta() {
-        btnIniciar_login.setOnClickListener {
+    private fun ingresarCuenta() {        btnIniciar_login.setOnClickListener {
             val correoUsuario = txtCorreo_login.text.toString()
             val passwordUsuario = txtPassword_login.text.toString()
 

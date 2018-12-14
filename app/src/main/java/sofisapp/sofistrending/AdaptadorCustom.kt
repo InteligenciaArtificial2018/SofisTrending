@@ -23,7 +23,7 @@ class AdaptadorCustom(var context: Context, var items: ArrayList<Prendas>, var l
         val item = items.get(position)
         holder.foto?.setImageResource(item.foto)
         holder.nombre?.text = item.nombre
-        holder.precio?.text = "L "+ item.precio.toString()
+        holder.precio?.text = "L " + item.precio.toString()
 
     }
 

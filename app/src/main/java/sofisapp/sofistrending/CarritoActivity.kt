@@ -1,11 +1,9 @@
 package sofisapp.sofistrending
 
-import android.content.Intent
+
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v7.app.AlertDialog
 import android.support.v7.widget.LinearLayoutManager
-import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_carrito.*
 import sofisapp.sofistrending.data.Carrito
 import sofisapp.sofistrending.data.SofiasTrendingDatabase
@@ -22,7 +20,6 @@ class CarritoActivity : AppCompatActivity(), CarritoAdapter.OnItemCarritoClickLi
         sofiasTrendingDatabase = SofiasTrendingDatabase.getInstance(this)
         carritoAdapter = CarritoAdapter(sofiasTrendingDatabase?.getCarritoDao()?.getListCarrito())
         carritoAdapter?.setItemCarritoClickListener(this)
-
 
     }
 

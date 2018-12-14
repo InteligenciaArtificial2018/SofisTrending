@@ -21,12 +21,10 @@ class BoysActivity:AppCompatActivity() {
 
         val prendas = ArrayList<Prendas>()
 
-        prendas.add(Prendas("Niños 1", R.drawable.boy1))
-        prendas.add(Prendas("Niños 2", R.drawable.boy1))
-        prendas.add(Prendas("Niños 3", R.drawable.boy1))
-        prendas.add(Prendas("Niños 4", R.drawable.boy1))
-
-
+        prendas.add(Prendas("Bebe Crece", R.drawable.boy1, 1500.00))
+        prendas.add(Prendas("OshKosh B' gosh", R.drawable.boy2, 2000.00))
+        prendas.add(Prendas("Hanna Andersson", R.drawable.boy3, 800.00))
+        prendas.add(Prendas("Tea Collection", R.drawable.boy4, 3000.00))
 
         lista = findViewById(R.id.rvLista)
         lista?.setHasFixedSize(true)
@@ -36,15 +34,11 @@ class BoysActivity:AppCompatActivity() {
 
         adaptador = AdaptadorCustom(this, prendas, object: ClickListener {
             override fun onClick(vista: View, index: Int) {
-                if ( prendas.get(index).nombre == "Niños 2"){
-                    val intent = Intent(applicationContext, CaballerosActivity::class.java)
+                if ( prendas.get(index).nombre == "Bebe Crece"){
+                    val intent = Intent(applicationContext, DetallesBoyOneActivity::class.java)
                     startActivity(intent)
                 }
-                else if ( prendas.get(index).nombre == "Niños 3"){
-                    val intent = Intent(applicationContext, DamasActivity::class.java)
-                    startActivity(intent)
-                }
-                Toast.makeText(applicationContext, prendas.get(index).nombre, Toast.LENGTH_SHORT).show()
+                //Toast.makeText(applicationContext, prendas.get(index).nombre, Toast.LENGTH_SHORT).show()
             }
         }, object: LongClickListener {
             override fun LongClickListener(vista: View, index: Int) {

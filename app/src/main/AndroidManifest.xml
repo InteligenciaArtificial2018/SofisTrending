@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="sofisapp.sofistrending">
+          package="sofisapp.sofistrending"
+android:installLocation="preferExternal">
+
 
     <application
             android:allowBackup="true"
@@ -29,6 +31,32 @@
         <activity android:name=".CarritoActivity">
         </activity>
         <activity android:name=".AgregarItemCarrito">
+        </activity>
+        <activity android:name=".DetallesBoyOneActivity">
+        </activity>
+        <activity android:name=".DetallesBoyOneCarritoActivity">
+        </activity>
+        <activity android:name=".Boy2Activity">
+        </activity>
+        <activity android:name=".Boy3Activity">
+        </activity>
+        <activity android:name=".Boy4Activity">
+        </activity>
+        <activity android:name=".Dama1Activity">
+        </activity>
+        <activity android:name=".Dama2Activity">
+        </activity>
+        <activity android:name=".Dama3Activity">
+        </activity>
+        <activity android:name=".Dama4Activity">
+        </activity>
+        <activity android:name=".Caballero1Activity">
+        </activity>
+        <activity android:name=".Caballero2Activity">
+        </activity>
+        <activity android:name=".Caballero3Activity">
+        </activity>
+        <activity android:name=".Caballero4Activity">
         </activity>
     </application>
 

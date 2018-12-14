@@ -19,10 +19,12 @@ class DamasActivity:AppCompatActivity() {
 
         val prendas = ArrayList<Prendas>()
 
-        prendas.add(Prendas("Mujer 1", R.drawable.mujer1))
-        prendas.add(Prendas("Mujer 2", R.drawable.mujer2))
-        prendas.add(Prendas("Mujer 3", R.drawable.mujer3))
-        prendas.add(Prendas("Mujer 4", R.drawable.mujer4))
+        prendas.add(Prendas("Vershka", R.drawable.mujer1, 500.00))
+        prendas.add(Prendas("Zara", R.drawable.mujer2, 1500.00))
+        prendas.add(Prendas("Pull And Bear", R.drawable.mujer3, 3400.00))
+        prendas.add(Prendas("Stradivarius", R.drawable.mujer4, 1200.00))
+
+
 
 
 

@@ -8,6 +8,7 @@ class Prendas(nombre: String, foto: Int, precio:Double) {
     init {
         this.nombre = nombre
         this.foto = foto
+        this.precio = precio
     }
 }
 

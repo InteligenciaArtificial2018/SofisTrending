@@ -8,25 +8,34 @@
         tools:context=".AgregarItemCarrito" android:orientation="vertical">
 
     <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/etNombre" android:hint="Nombre"/>
+            android:background="@drawable/estilo_cajas_de_texto"
+            android:id="@+id/etNombre" android:hint="Nombre" android:layout_marginTop="45dp"
+            android:paddingLeft="15dp" android:layout_marginLeft="45dp"/>
     <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="280dp"
+
+            android:layout_height="50dp"
+            android:background="@drawable/estilo_cajas_de_texto"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/etCantidad" android:hint="Cantidad"/>
+            android:id="@+id/etCantidad" android:hint="Cantidad" android:layout_marginTop="10dp"
+            android:paddingLeft="15dp" android:layout_marginLeft="45dp"/>
     <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:background="@drawable/estilo_cajas_de_texto"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/etPrecio" android:hint="Precio"/>
+            android:id="@+id/etPrecio" android:hint="Precio" android:layout_marginTop="10dp"
+            android:paddingLeft="15dp" android:layout_marginLeft="45dp"/>
     <Button
+            android:background="@drawable/estilo_botones"
             android:text="Agregar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/btnAgregar"/>
+            android:layout_width="124dp"
+            android:layout_height="wrap_content" android:id="@+id/btnAgregar" android:layout_marginLeft="120dp"
+            android:textColor="@android:color/white" android:layout_marginTop="10dp"/>
 </LinearLayout>
