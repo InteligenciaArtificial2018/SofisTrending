@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'kotlin-kapt'
+
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -37,8 +39,11 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:16.0.2'
     // Agregando Cloud Storage de Firebase
     implementation 'com.google.firebase:firebase-storage:16.0.2'
-    // Agregando Cloud Base de Datos de Firebase
-    implementation 'com.google.firebase:firebase-database:16.0.2'
+
+    def room_version = "1.1.1"
+
+    implementation "android.arch.persistence.room:runtime:$room_version"
+    kapt "android.arch.persistence.room:compiler:$room_version"
 }
 
 apply plugin: 'com.google.gms.google-services'

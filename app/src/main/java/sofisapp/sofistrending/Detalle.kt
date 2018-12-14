@@ -1,6 +1,6 @@
-package sofisapp.sofistrending.modelos
+package sofisapp.sofistrending
 
-class Detalles (titulo: String, contenido: String, foto: Int) {
+class Detalle(titulo: String, contenido: String, foto: Int) {
     var titulo = ""
     var contenido = ""
     var foto = 0

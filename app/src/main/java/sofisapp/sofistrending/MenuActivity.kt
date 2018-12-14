@@ -5,9 +5,6 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_menu.*
-import sofisapp.sofistrending.items.BoysActivity
-import sofisapp.sofistrending.items.CaballerosActivity
-import sofisapp.sofistrending.items.DamasActivity
 
 class MenuActivity:AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,4 +1,4 @@
-package sofisapp.sofistrending.items
+package sofisapp.sofistrending
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -7,11 +7,6 @@ import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.view.View
 import android.widget.Toast
-import sofisapp.sofistrending.click_listener.ClickListener
-import sofisapp.sofistrending.click_listener.LongClickListener
-import sofisapp.sofistrending.modelos.Prendas
-import sofisapp.sofistrending.R
-import sofisapp.sofistrending.adaptadores.AdaptadorCustom
 
 class DamasActivity:AppCompatActivity() {
     var lista: RecyclerView? = null
@@ -24,10 +19,11 @@ class DamasActivity:AppCompatActivity() {
 
         val prendas = ArrayList<Prendas>()
 
-        prendas.add(Prendas("Guess", 550.00, R.drawable.mujer1))
-        prendas.add(Prendas("Morgan 2", 800.00, R.drawable.mujer2))
-        prendas.add(Prendas("Buylevard", 1500.00, R.drawable.mujer3))
-        prendas.add(Prendas("Only", 250.00, R.drawable.mujer4))
+        prendas.add(Prendas("Mujer 1", R.drawable.mujer1))
+        prendas.add(Prendas("Mujer 2", R.drawable.mujer2))
+        prendas.add(Prendas("Mujer 3", R.drawable.mujer3))
+        prendas.add(Prendas("Mujer 4", R.drawable.mujer4))
+
 
 
         lista = findViewById(R.id.rvLista)
@@ -36,11 +32,11 @@ class DamasActivity:AppCompatActivity() {
         layoutManager = LinearLayoutManager(this)
         lista?.layoutManager = layoutManager
 
-        adaptador = AdaptadorCustom(this, prendas, object : ClickListener {
+        adaptador = AdaptadorCustom(this, prendas, object: ClickListener {
             override fun onClick(vista: View, index: Int) {
                 Toast.makeText(applicationContext, prendas.get(index).nombre, Toast.LENGTH_SHORT).show()
             }
-        }, object : LongClickListener {
+        }, object: LongClickListener {
             override fun LongClickListener(vista: View, index: Int) {
                 Log.d("LONG", "Long listenersito")
             }

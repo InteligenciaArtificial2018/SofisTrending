@@ -4,7 +4,6 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
-import sofisapp.sofistrending.detalles.DetallesBoy1Activity
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,21 +11,20 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        tvMenu.setOnClickListener {
-            val intent = Intent(this, MenuActivity::class.java)
-            startActivity(intent)
-            //Toast.makeText(this, "Ingresando al menu", Toast.LENGTH_SHORT).show()
-
-
-            //esta para ir a detalles cuando da click en una prenda de damas
-            tvMenu.setOnClickListener {
-                val intent = Intent(this, DetallesBoy1Activity::class.java)
-                startActivity(intent)
-                //Toast.makeText(this, "Ingresando a Detalles", Toast.LENGTH_SHORT).show()
-            }
-
-
-        }
+//        tvMenu.setOnClickListener {
+//            val intent = Intent(this, MenuActivity::class.java)
+//            startActivity(intent)
+//
+//            /**
+//             *
+//             */
+//            tvMenu.setOnClickListener {
+//                val intent = Intent(this, MenuActivity::class.java)
+//                startActivity(intent)
+//            }
+//
+//
+//        }
 
 
     }

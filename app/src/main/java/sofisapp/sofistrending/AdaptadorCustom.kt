@@ -1,4 +1,4 @@
-package sofisapp.sofistrending.adaptadores
+package sofisapp.sofistrending
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
@@ -7,13 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import sofisapp.sofistrending.click_listener.ClickListener
-import sofisapp.sofistrending.modelos.Detalles
-import sofisapp.sofistrending.click_listener.LongClickListener
-import sofisapp.sofistrending.R
 
-class AdaptadorCustomDetalles(var context: Context, var items: ArrayList<Detalles>, var listener: ClickListener, var longClickListener: LongClickListener): RecyclerView.Adapter<AdaptadorCustomDetalles.ViewHolder>() {
-    override fun onCreateViewHolder(parent: ViewGroup, position: Int): ViewHolder {
+class AdaptadorCustom(var context: Context, var items: ArrayList<Prendas>, var listener: ClickListener, var longClickListener: LongClickListener): RecyclerView.Adapter<AdaptadorCustom.ViewHolder>() {
+    override fun onCreateViewHolder(parent: ViewGroup, position: Int): AdaptadorCustom.ViewHolder {
         val vista = LayoutInflater.from(context).inflate(R.layout.activity_template, parent, false)
 
         return ViewHolder(vista, listener, longClickListener)
@@ -23,11 +19,12 @@ class AdaptadorCustomDetalles(var context: Context, var items: ArrayList<Detalle
         return items.count()
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: AdaptadorCustom.ViewHolder, position: Int) {
         val item = items.get(position)
         holder.foto?.setImageResource(item.foto)
-        holder.titulo?.text = item.titulo
-        holder.contenido?.text = item.contenido
+        holder.nombre?.text = item.nombre
+        holder.precio?.text = "L "+ item.precio.toString()
+
     }
 
     class ViewHolder(var vista: View, var listener: ClickListener, var longClickListener: LongClickListener): RecyclerView.ViewHolder(vista), View.OnClickListener, View.OnLongClickListener {
@@ -42,14 +39,14 @@ class AdaptadorCustomDetalles(var context: Context, var items: ArrayList<Detalle
         }
 
         var foto: ImageView? = null
-        var titulo: TextView? = null
-        var contenido: TextView? = null
+        var nombre: TextView? = null
+        var precio: TextView? = null
 
 
         init {
-            foto = vista.findViewById(R.id.imgPrenda)
-            titulo = vista.findViewById(R.id.tvTitulo)
-            contenido = vista.findViewById(R.id.tvContenido)
+            foto = vista.findViewById(R.id.ivImagen)
+            nombre = vista.findViewById(R.id.tvNombre)
+            precio = vista.findViewById(R.id.tvPrecio)
 
             vista.setOnClickListener(this)
             vista.setOnLongClickListener(this)

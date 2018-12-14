@@ -17,12 +17,18 @@
             </intent-filter>
         </activity>
         <activity android:name=".MenuActivity"/>
-        <activity android:name=".items.BoysActivity"/>
-        <activity android:name=".items.DamasActivity"/>
-        <activity android:name=".items.CaballerosActivity"/>
+        <activity android:name=".BoysActivity"/>
+        <activity android:name=".DamasActivity"/>
+        <activity android:name=".CaballerosActivity"/>
         <activity android:name=".detalles.DetallesBoy1Activity">
         </activity>
         <activity android:name=".LoginActivity">
+        </activity>
+        <activity android:name=".ActivityDetallesBoy1">
+        </activity>
+        <activity android:name=".CarritoActivity">
+        </activity>
+        <activity android:name=".AgregarItemCarrito">
         </activity>
     </application>
 

@@ -1,4 +1,4 @@
-package sofisapp.sofistrending.items
+package sofisapp.sofistrending
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,12 +7,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.view.View
-import sofisapp.sofistrending.*
-import sofisapp.sofistrending.adaptadores.AdaptadorCustom
-import sofisapp.sofistrending.click_listener.ClickListener
-import sofisapp.sofistrending.click_listener.LongClickListener
-import sofisapp.sofistrending.detalles.DetallesBoy1Activity
-import sofisapp.sofistrending.modelos.Prendas
+import android.widget.Toast
 
 class BoysActivity:AppCompatActivity() {
 
@@ -26,10 +21,11 @@ class BoysActivity:AppCompatActivity() {
 
         val prendas = ArrayList<Prendas>()
 
-        prendas.add(Prendas("Niños 1", 280.00, R.drawable.boy1))
-        prendas.add(Prendas("Niños 2", 300.00, R.drawable.boy2))
-        prendas.add(Prendas("Niños 3", 500.00, R.drawable.boy3))
-        prendas.add(Prendas("Niños 4", 250.00, R.drawable.boy4))
+        prendas.add(Prendas("Niños 1", R.drawable.boy1))
+        prendas.add(Prendas("Niños 2", R.drawable.boy1))
+        prendas.add(Prendas("Niños 3", R.drawable.boy1))
+        prendas.add(Prendas("Niños 4", R.drawable.boy1))
+
 
 
         lista = findViewById(R.id.rvLista)
@@ -38,14 +34,19 @@ class BoysActivity:AppCompatActivity() {
         layoutManager = LinearLayoutManager(this)
         lista?.layoutManager = layoutManager
 
-        adaptador = AdaptadorCustom(this, prendas, object : ClickListener {
+        adaptador = AdaptadorCustom(this, prendas, object: ClickListener {
             override fun onClick(vista: View, index: Int) {
-                if (prendas.get(index).nombre == "Niños 1") {
-                    val intent = Intent(applicationContext, DetallesBoy1Activity::class.java)
+                if ( prendas.get(index).nombre == "Niños 2"){
+                    val intent = Intent(applicationContext, CaballerosActivity::class.java)
                     startActivity(intent)
                 }
+                else if ( prendas.get(index).nombre == "Niños 3"){
+                    val intent = Intent(applicationContext, DamasActivity::class.java)
+                    startActivity(intent)
+                }
+                Toast.makeText(applicationContext, prendas.get(index).nombre, Toast.LENGTH_SHORT).show()
             }
-        }, object : LongClickListener {
+        }, object: LongClickListener {
             override fun LongClickListener(vista: View, index: Int) {
                 Log.d("LONG", "Long listenersito")
             }
@@ -57,3 +58,4 @@ class BoysActivity:AppCompatActivity() {
     }
 
 }
+
